@@ -21,8 +21,8 @@
     align-items: center;
   }
   .card.img{
-    
-    max-height:170px;
+      max-height:100px;
+      overflow: hidden;
   }
   .card-grid{
     display: flex;

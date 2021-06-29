@@ -7,15 +7,19 @@ export default function GifGrid({ category }) {
 
   return (
     <div className="card-grid">
-      <h1>{category}</h1>
-      {loading && (
-        <h1 className="animate__animated animate__flash">Cargando ...</h1>
-      )}
-      {imagenes.map((img) => (
-        <GifGridItem {...img} key={img.id}>
-          {" "}
-        </GifGridItem>
-      ))}
+      <div className="row">
+        <h1>{category}</h1>
+        {loading && (
+          <h1 className="animate__animated animate__flash">Cargando ...</h1>
+        )}
+        {imagenes.map((img) => (
+          <div className="col-lg-3 col-md-4 col-sm-12">
+            <GifGridItem {...img} key={img.id}>
+              {" "}
+            </GifGridItem>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

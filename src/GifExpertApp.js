@@ -6,16 +6,20 @@ export default function GifExpertApp() {
   const [categories, setCategories] = useState(["One Punch"]);
 
   return (
-    <div>
-      <h2>GifExpertApp</h2>
+    <div className="container">
+      <h2
+        style={{ marginTop: "20px", marginLeft: "auto", marginRight: "auto" }}
+        className="text-center"
+      >
+        <b> GifExpertApp</b>
+      </h2>
       <hr></hr>
       <AddCategory add={setCategories}></AddCategory>
-
-      <ol>
+      <div className="row">
         {categories.map((c, i) => (
           <GifGrid category={c} key={i}></GifGrid>
         ))}
-      </ol>
+      </div>
     </div>
   );
 }

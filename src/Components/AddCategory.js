@@ -10,9 +10,9 @@ export default function AddCategory({ add }) {
   };
   return (
     <div>
-      AddCategory
       <form onSubmit={handleSubmit}>
         <input
+          className="form-control"
           onChange={(e) => setinputValue(e.target.value)}
           value={inputValue}
           type="text"
